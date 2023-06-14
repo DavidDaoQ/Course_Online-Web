@@ -5,6 +5,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--LINK FAVICON-->
+    <!--LINK FONTAWESOME CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--LINK BOOSTRAP 5-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <!--LINK CSS-->
     <link
@@ -17,19 +26,16 @@
       class="js-color-style"
       href="./css/colors/color-1.css"
     />
-    <link rel="stylesheet" class="js-glass-style" href="./css/glass.css" />
-    <!--LINK FONTAWESOME CDN-->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      class="js-glass-style"
+      href="./css/glass.css"
+      disabled
     />
-    <!--LINK BOOSTRAP 5-->
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
 
-  <body class="t-dark">
+  <body>
     <!--main wrapper start-->
     <div class="main-wrapper">
       <!--header start-->
@@ -123,9 +129,71 @@
           </div>
         </div>
       </section>
-
       <!--banner section end-->
 
+      <!-- style switcher start -->
+      <div class="style-switcher">
+        <div class="style-switcher-toggler js-style-switcher-toggler">
+          <i class="fas fa-cog"></i>
+        </div>
+        <h3>Style Switcher</h3>
+        <div class="style-switcher-item">
+          <p class="mb-3">Theme Colors</p>
+          <!-- theme colors -->
+          <div class="theme-colors js-theme-colors">
+            <button
+              type="button"
+              data-js-theme-color="color-1"
+              class="js-theme-color-item color-1"
+            ></button>
+            <button
+              type="button"
+              data-js-theme-color="color-2"
+              class="js-theme-color-item color-2"
+            ></button>
+            <button
+              type="button"
+              data-js-theme-color="color-3"
+              class="js-theme-color-item color-3"
+            ></button>
+            <button
+              type="button"
+              data-js-theme-color="color-4"
+              class="js-theme-color-item color-4"
+            ></button>
+            <button
+              type="button"
+              data-js-theme-color="color-5"
+              class="js-theme-color-item color-5"
+            ></button>
+          </div>
+        </div>
+        <div class="style-switcher-item">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input js-dark-mode"
+              type="checkbox"
+              role="switch"
+              id="dark-mode"
+            />
+            <label class="form-check-label" for="dark-mode">Dark Mode</label>
+          </div>
+        </div>
+        <div class="style-switcher-item">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input js-glass-effect"
+              type="checkbox"
+              role="switch"
+              id="glass-effect"
+            />
+            <label class="form-check-label" for="glass-effect"
+              >Glass Effect</label
+            >
+          </div>
+        </div>
+      </div>
+      <!-- style switcher end -->
       <!--fun facts section start-->
       <section class="fun-facts-section">
         <div class="container">
@@ -583,70 +651,6 @@
       <!-- footer end -->
     </div>
     <!--main wrapper end-->
-
-    <!-- style switcher start -->
-    <div class="style-switcher">
-      <div class="style-switcher-toggler js-style-switcher-toggler">
-        <i class="fas fa-cog"></i>
-      </div>
-      <h3>Style Switcher</h3>
-      <div class="style-switcher-item">
-        <p class="mb-3">Theme Colors</p>
-        <!-- theme colors -->
-        <div class="theme-colors js-theme-colors">
-          <button
-            type="button"
-            data-js-theme-color="color-1"
-            class="js-theme-color-item color-1"
-          ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-2"
-            class="js-theme-color-item color-2"
-          ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-3"
-            class="js-theme-color-item color-3"
-          ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-4"
-            class="js-theme-color-item color-4"
-          ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-5"
-            class="js-theme-color-item color-5"
-          ></button>
-        </div>
-      </div>
-      <div class="style-switcher-item">
-        <div class="form-check form-switch">
-          <input
-            class="form-check-input js-dark-mode"
-            type="checkbox"
-            role="switch"
-            id="dark-mode"
-          />
-          <label class="form-check-label" for="dark-mode">Dark Mode</label>
-        </div>
-      </div>
-      <div class="style-switcher-item">
-        <div class="form-check form-switch">
-          <input
-            class="form-check-input js-glass-effect"
-            type="checkbox"
-            role="switch"
-            id="glass-effect"
-          />
-          <label class="form-check-label" for="glass-effect"
-            >Glass Effect</label
-          >
-        </div>
-      </div>
-    </div>
-    <!-- style switcher end -->
 
     <!-- link js boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

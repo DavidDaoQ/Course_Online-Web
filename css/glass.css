@@ -50,12 +50,12 @@ body::before {
   height: 100%;
   width: 100%;
   background-color: var(--WHITE);
-  opacity: 0.5;
+  opacity: 0.4;
   z-index: -3;
 }
 .main-wrapper {
-  max-width: 1000px;
-  background-color: var(--WHITE);
+  max-width: 1200px;
+  background-color: var(--white);
   border: 1px solid var(--border-color-2);
   margin: auto;
   border-radius: 20px;
@@ -65,7 +65,7 @@ body::before {
   content: "";
   position: absolute;
   left: 0;
-  right: 0;
+  top: 0;
   height: 100%;
   width: 100%;
   backdrop-filter: var(--backdrop-filter-blur);
@@ -87,6 +87,7 @@ body::before {
 .modal-backdrop {
   background-color: var(--white);
 }
+/* glass dark */
 body.t-dark {
   --border-color-2: hsla(0, 0%, 100%, 0.07);
   --border-color-1: hsl(0, 0%, 100%, 0.15);
@@ -102,27 +103,6 @@ body.t-dark::before {
   height: 100%;
   width: 100%;
   background-color: var(--BLACK);
-  opacity: 0.2;
-  z-index: -1;
-}
-/* glass dark  */
-body.t-dark {
-  --border-color-2: hsla(0, 0%, 100%, 0.07);
-  --border-color-1: hsla(0, 0%, 100%, 0.15);
-  --white: hsla(0, 0%, 100%, 0.05);
-  --shadow: none;
-}
-/*
-control darkness using opacity property
-*/
-body.t-dark::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--BLACK);
-  opacity: 0.2;
+  opacity: 0.4;
   z-index: -1;
 }

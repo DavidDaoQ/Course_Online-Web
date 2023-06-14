@@ -32,6 +32,54 @@ function coursePreviewVideo() {
 coursePreviewVideo();
 
 /**
+ * header menu
+ * */
+function headerMenu() {
+  const menu = document.querySelector(".js-header-menu");
+  const backdrop = document.querySelector(".js-header-backdrop");
+  const menuCollapseBreakpoint = 991;
+
+  function toggleMenu() {
+    menu.classList.toggle("open");
+    backdrop.classList.toggle("active");
+    document.body.classList.toggle("overflow-hidden");
+  }
+
+  document.querySelectorAll(".js-header-menu-toggler").forEach((item) => {
+    item.addEventListener("click", toggleMenu);
+  });
+
+  // close the menu by clicking outside of it
+  backdrop.addEventListener("click", toggleMenu);
+
+  function collapse() {
+    menu.querySelector(".active .js-sub-menu").removeAttribute("style");
+    menu.querySelector(".active").classList.remove("active");
+  }
+  menu.addEventListener("click", (event) => {
+    const { target } = event;
+
+    if (
+      target.classList.contains("js-toggle-sub-menu") &&
+      window.innerWidth <= menuCollapseBreakpoint
+    ) {
+      //prevent default anchor click behavior
+      event.preventDefault();
+
+      //
+      if (menu.querySelector(".active")) {
+        collapse();
+      }
+      //expand new menu-item
+      target.parentElement.classList.add("active");
+      target.nextElementSibling.style.maxHeight =
+        target.nextElementSibling.scrollHeight + "px";
+    }
+  });
+}
+headerMenu();
+
+/**
  * Style switcher
  */
 function styleSwitcherToggle() {
@@ -94,22 +142,18 @@ function themeColors() {
 }
 themeColors();
 
-/**
- * theme light & dark mode
- */
-
+// theme light & dark mode
 function themeLightDark() {
   const darkModeCheckbox = document.querySelector(".js-dark-mode");
 
   darkModeCheckbox.addEventListener("click", function () {
     if (this.checked) {
-      localStorage.setItem("theme-dark", true);
+      localStorage.setItem("theme-dark", "true");
     } else {
-      localStorage.setItem("theme-dark", false);
+      localStorage.setItem("theme-dark", "false");
     }
     themeMode();
   });
-
   function themeMode() {
     if (localStorage.getItem("theme-dark") === "false") {
       document.body.classList.remove("t-dark");
@@ -117,21 +161,14 @@ function themeLightDark() {
       document.body.classList.add("t-dark");
     }
   }
-  if (localStorage.getItem("theme-dark") !== null) {
-    themeMode();
-  }
-  if (document.body.classList.contains("t-dark")) {
-    darkModeCheckbox.checked = true;
-  }
 }
 themeLightDark();
 /**
- *
  * theme glass effect
- * */
+ */
 function themeGlassEffect() {
-  const glassEffectCheckbox = document.querySelector(".js-glass-effect"),
-    glassStyle = document.querySelector(".js-glass-style");
+  const glassEffectCheckbox = document.querySelector(".js-glass-effect");
+  const glassStyle = document.querySelector(".js-glass-style");
 
   glassEffectCheckbox.addEventListener("click", function () {
     if (this.checked) {
@@ -142,7 +179,7 @@ function themeGlassEffect() {
     glass();
   });
   function glass() {
-    if (localStorage.getItem("glass-effect") === true) {
+    if (localStorage.getItem("glass-effect") === "true") {
       glassStyle.removeAttribute("disabled");
     } else {
       glassStyle.disabled = true;
