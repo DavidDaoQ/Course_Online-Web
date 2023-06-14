@@ -19,6 +19,11 @@
       rel="stylesheet"
       class="js-color-style"
       href="./css/colors/color-1.css"
+    /> <link
+      rel="stylesheet"
+      class="js-glass-style"
+      href="./css/glass.css"
+      
     />
 
     <!--LINK FONTAWESOME CDN-->
@@ -31,7 +36,7 @@
     />
   </head>
 
-  <body>
+  <body class="t-dark">
     <!--main wrapper start-->
     <div class="main-wrapper">
       <!--header start-->
@@ -96,8 +101,70 @@
       <!--HEADER END-->
 
       <!--fun facts section part-->
+
+<!-- style switcher start -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler js-style-switcher-toggler">
+        <i class="fas fa-cog"></i>
+      </div>
+      <h3>Style Switcher</h3>
+      <div class="style-switcher-item">
+        <p class="mb-3">Theme Colors</p>
+        <!-- theme colors -->
+        <div class="theme-colors js-theme-colors">
+          <button
+            type="button"
+            data-js-theme-color="color-1"
+            class="js-theme-color-item color-1"
+          ></button>
+          <button
+            type="button"
+            data-js-theme-color="color-2"
+            class="js-theme-color-item color-2"
+          ></button>
+          <button
+            type="button"
+            data-js-theme-color="color-3"
+            class="js-theme-color-item color-3"
+          ></button>
+          <button
+            type="button"
+            data-js-theme-color="color-4"
+            class="js-theme-color-item color-4"
+          ></button>
+          <button
+            type="button"
+            data-js-theme-color="color-5"
+            class="js-theme-color-item color-5"
+          ></button>
+        </div>
+      </div>
+      <div class="style-switcher-item">
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input js-dark-mode"
+            type="checkbox"
+            role="switch"
+            id="dark-mode"
+          />
+          <label class="form-check-label" for="dark-mode">Dark Mode</label>
+        </div>
+      </div>
+      <div class="style-switcher-item">
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input js-glass-effect"
+            type="checkbox"
+            role="switch"
+            id="glass-effect"
+          />
+          <label class="form-check-label" for="glass-effect"
+            >Glass Effect</label
+          >
+        </div>
+      </div>
     </div>
-    <!--main wrapper end-->
+    <!-- style switcher end -->
 
     <!-- course preview modal start -->
     <div class="modal fade video-modal js-course-preview-modal" id="video-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -760,6 +827,11 @@
       </div>
     </footer>
     <!-- footer end -->
+
+    </div>
+    <!--main wrapper end-->
+
+
 
     <!-- link js boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

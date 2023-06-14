@@ -20,7 +20,7 @@
       class="js-color-style"
       href="./css/colors/color-1.css"
     />
-
+    <link rel="stylesheet" class="js-glass-style" href="./css/glass.css" />
     <!--LINK FONTAWESOME CDN-->
     <link
       rel="stylesheet"
@@ -31,7 +31,7 @@
     />
   </head>
 
-  <body>
+  <body class="t-dark">
     <!--main wrapper start-->
     <div class="main-wrapper">
       <!--header start-->
@@ -157,123 +157,189 @@
       <!-- sign up section end -->
 
       <!--fun facts section part-->
-    </div>
-    <!--main wrapper end-->
-    <!-- footer start -->
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-lg-3">
-              <div class="footer-item">
-                <h3><span>DQS</span>tudy</h3>
-                <ul>
-                  <li>
-                    <a href="#">About</a>
-                  </li>
-                  <li>
-                    <a href="#">What we offer</a>
-                  </li>
-                  <li>
-                    <a href="#">Careers</a>
-                  </li>
-                  <li>
-                    <a href="#">Certificates</a>
-                  </li>
-                  <li>
-                    <a href="#">Blog</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
 
-            <div class="col-sm-6 col-lg-3">
-              <div class="footer-item">
-                <h3>Learning</h3>
-                <ul>
-                  <li>
-                    <a href="#">Get the app</a>
-                  </li>
-                  <li>
-                    <a href="#">Testimonials</a>
-                  </li>
-                  <li>
-                    <a href="#">Pricing</a>
-                  </li>
-                  <li>
-                    <a href="#">Faqs</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+      <!-- style switcher start -->
+      <div class="style-switcher">
+        <div class="style-switcher-toggler js-style-switcher-toggler">
+          <i class="fas fa-cog"></i>
+        </div>
+        <h3>Style Switcher</h3>
+        <div class="style-switcher-item">
+          <p class="mb-3">Theme Colors</p>
+          <!-- theme colors -->
+          <div class="theme-colors js-theme-colors">
+            <button
+              type="button"
+              data-js-theme-color="color-1"
+              class="js-theme-color-item color-1"
+            ></button>
+            <button
+              type="button"
+              data-js-theme-color="color-2"
+              class="js-theme-color-item color-2"
+            ></button>
+            <button
+              type="button"
+              data-js-theme-color="color-3"
+              class="js-theme-color-item color-3"
+            ></button>
+            <button
+              type="button"
+              data-js-theme-color="color-4"
+              class="js-theme-color-item color-4"
+            ></button>
+            <button
+              type="button"
+              data-js-theme-color="color-5"
+              class="js-theme-color-item color-5"
+            ></button>
+          </div>
+        </div>
+        <div class="style-switcher-item">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input js-dark-mode"
+              type="checkbox"
+              role="switch"
+              id="dark-mode"
+            />
+            <label class="form-check-label" for="dark-mode">Dark Mode</label>
+          </div>
+        </div>
+        <div class="style-switcher-item">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input js-glass-effect"
+              type="checkbox"
+              role="switch"
+              id="glass-effect"
+            />
+            <label class="form-check-label" for="glass-effect"
+              >Glass Effect</label
+            >
+          </div>
+        </div>
+      </div>
+      <!-- style switcher end -->
 
-            <div class="col-sm-6 col-lg-3">
-              <div class="footer-item">
-                <h3>More</h3>
-                <ul>
-                  <li>
-                    <a href="#">Afflicates</a>
-                  </li>
-                  <li>
-                    <a href="#">Become a course creator</a>
-                  </li>
-                  <li>
-                    <a href="#">Training webinars</a>
-                  </li>
-                  <li>
-                    <a href="#">Free personality</a>
-                  </li>
-                  <li>
-                    <a href="#">Help and support</a>
-                  </li>
-                </ul>
+      <!-- footer start -->
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-lg-3">
+                <div class="footer-item">
+                  <h3><span>DQS</span>tudy</h3>
+                  <ul>
+                    <li>
+                      <a href="#">About</a>
+                    </li>
+                    <li>
+                      <a href="#">What we offer</a>
+                    </li>
+                    <li>
+                      <a href="#">Careers</a>
+                    </li>
+                    <li>
+                      <a href="#">Certificates</a>
+                    </li>
+                    <li>
+                      <a href="#">Blog</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
 
-            <div class="col-sm-6 col-lg-3">
-              <div class="footer-item">
-                <h3>Get In Touch</h3>
-                <ul>
-                  <li>
-                    <a href="#"
-                      ><i class="fab fa-facebook social-icon"></i>Facebook</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><i class="fab fa-twitter social-icon"></i>Twitter</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><i class="fab fa-instagram social-icon"></i>Instagram</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><i class="fab fa-youtube social-icon"></i>Youtube</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><i class="fab fa-linkedin social-icon"></i>LinkedIn</a
-                    >
-                  </li>
-                </ul>
+              <div class="col-sm-6 col-lg-3">
+                <div class="footer-item">
+                  <h3>Learning</h3>
+                  <ul>
+                    <li>
+                      <a href="#">Get the app</a>
+                    </li>
+                    <li>
+                      <a href="#">Testimonials</a>
+                    </li>
+                    <li>
+                      <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                      <a href="#">Faqs</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-3">
+                <div class="footer-item">
+                  <h3>More</h3>
+                  <ul>
+                    <li>
+                      <a href="#">Afflicates</a>
+                    </li>
+                    <li>
+                      <a href="#">Become a course creator</a>
+                    </li>
+                    <li>
+                      <a href="#">Training webinars</a>
+                    </li>
+                    <li>
+                      <a href="#">Free personality</a>
+                    </li>
+                    <li>
+                      <a href="#">Help and support</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-3">
+                <div class="footer-item">
+                  <h3>Get In Touch</h3>
+                  <ul>
+                    <li>
+                      <a href="#"
+                        ><i class="fab fa-facebook social-icon"></i>Facebook</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fab fa-twitter social-icon"></i>Twitter</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fab fa-instagram social-icon"></i
+                        >Instagram</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fab fa-youtube social-icon"></i>Youtube</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fab fa-linkedin social-icon"></i>LinkedIn</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <p class="m-0 py-4 text-center">
-            Copyright &copy; 2023 Dao Dang Quang
-          </p>
+        <div class="footer-bottom">
+          <div class="container">
+            <p class="m-0 py-4 text-center">
+              Copyright &copy; 2023 Dao Dang Quang
+            </p>
+          </div>
         </div>
-      </div>
-    </footer>
-    <!-- footer end -->
+      </footer>
+      <!-- footer end -->
+    </div>
+    <!--main wrapper end-->
 
     <!-- link js boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
